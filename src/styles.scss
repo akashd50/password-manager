@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+
+.app-body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+:root {
+    --surface: #ffffff;
+    --surface-focused: #D8D8D8;
+    --surface-raised: #D0D0D0;
+    --surface-overlay: #AEAEAE;
+
+    --text-color-high: black;
+    --text-color-mid: #202020;
+    --text-color-low: #3C3C3C;
+    --text-color-link: #001EA7;
+
+    @media (prefers-color-scheme: dark) {
+        --surface: #242424;
+        --surface-raised: #3D3D3D;
+        --surface-focused: #4E4E4E;
+        --surface-overlay: #040404;
+
+        --text-color-high: #ffffff;
+        --text-color-mid: #DCDCDC;
+        --text-color-low: #A8A8A8;
+        --text-color-link: #5AC9FF;
+    }
+}
+
+* {
+    font-family: "Calibri Light";
+}
+
+h1 {
+    color: var(--text-color-high);
+}
+
+h2 {
+    color: var(--text-color-high);
+}
+
+h3 {
+    color: var(--text-color-high);
+}
+
+p {
+    color: var(--text-color-high);
+}
+
+a {
+    color: var(--text-color-link);
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    margin: 16px 0 16px 16px;
+    background-color: var(--surface-raised);
+    color: var(--text-color-high);
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        background-color: var(--surface-focused);
+    }
+
+    &:after {
+        content: "";
+        background: var(--surface-overlay);
+        display: block;
+        position: absolute;
+        top: -100%;
+        left: -50%;
+        margin: 0;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 1.0s;
+    }
+
+    &:active:after {
+        width: 0;
+        height: 0;
+        margin: 30%;
+        padding: 0;
+        opacity: 1;
+        transition: 0s
+    }
+}
+
+.text-body {
+    color: var(--text-color-high);
+}
+
+li {
+    margin: 8px 0 8px 0;
+}
+
+.badge {
+    padding: 2px 8px 2px 8px;
+    border-radius: 4px;
+    background-color: darkslategray;
+}
+
+.m-4 {
+    margin: 4px;
+}
+
+.m-8 {
+    margin: 8px;
+}
