@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "webgl-tryouts": {
+    "password-manager": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
               "path": "custom-webpack.config.js",
               "replaceDuplicatePlugins": true
             },
-            "outputPath": "dist/webgl-tryouts",
+            "outputPath": "dist/password-manager",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -77,10 +77,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "webgl-tryouts:build:production"
+              "browserTarget": "password-manager:build:production"
             },
             "development": {
-              "browserTarget": "webgl-tryouts:build:development"
+              "browserTarget": "password-manager:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "webgl-tryouts:build"
+            "browserTarget": "password-manager:build"
           }
         },
         "test": {
@@ -113,5 +113,5 @@
       }
     }
   },
-  "defaultProject": "webgl-tryouts"
+  "defaultProject": "password-manager"
 }

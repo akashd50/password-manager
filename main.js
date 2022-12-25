@@ -10,7 +10,7 @@ function createWindow () {
         icon: `file://${__dirname}/dist/assets/logo.png`
     });
 
-    win.loadURL(`file://${__dirname}/dist/webgl-tryouts/index.html`);
+    win.loadURL(`file://${__dirname}/dist/password-manager/index.html`);
 
     // uncomment below to open the DevTools.
     // win.webContents.openDevTools()
