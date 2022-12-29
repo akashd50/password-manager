@@ -26,6 +26,8 @@ jobs:
 
             - name: Deploy frontend 🚀
               uses: JamesIves/github-pages-deploy-action@v4.2.5
+              env:
+                  FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS }}
               with:
                   branch: gh-pages
                   folder: dist/password-manager
