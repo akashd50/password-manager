@@ -4,10 +4,9 @@
     "main": "main.js",
     "scripts": {
         "ng": "ng",
-        "config": "node ./config.index.ts",
         "start": "ng serve",
-        "build": "npm run config && ng build",
-        "build-prod": "npm run config && ng build --prod",
+        "build": "ng build",
+        "build-prod": "ng build --prod",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
         "electron": "electron --use_dawn --enable-unsafe-webgpu -- --base-href ./ .",
