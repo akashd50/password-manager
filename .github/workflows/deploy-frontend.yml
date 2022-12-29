@@ -24,7 +24,7 @@ jobs:
             - name: Build
               env:
                   FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS }}
-              run: npm run build-prod
+              run: npx ng build --configuration production --base-href https://akashd50.github.io/password-manager/
 
             - name: Deploy frontend 🚀
               uses: JamesIves/github-pages-deploy-action@v4.2.5
