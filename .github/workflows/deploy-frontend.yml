@@ -21,13 +21,10 @@ jobs:
             - name: Install dependencies
               run: npm install
 
-            - name: Update config
+            - name: Build
               env:
                   FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS }}
-              run: node ./config.index.ts
-
-            - name: Build
-              run: npx ng build-prod --configuration production --base-href https://akashd50.github.io/password-manager/
+              run: npm run build-prod
 
             - name: Deploy frontend 🚀
               uses: JamesIves/github-pages-deploy-action@v4.2.5
