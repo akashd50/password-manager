@@ -22,11 +22,11 @@ jobs:
               run: npm install
 
             - name: Update environment
+              env:
+                  FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS }}
               run: node ./config.index.js
 
             - name: Build
-              env:
-                  FIREBASE_OPTIONS: ${{ secrets.FIREBASE_OPTIONS }}
               run: npx ng build --configuration production --base-href https://akashd50.github.io/password-manager/
 
             - name: Deploy frontend 🚀
